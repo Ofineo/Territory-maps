@@ -1,3 +1,36 @@
+#Map-it
+
+This application is to manage and visualize already created and stored maps in a server.
+
+###DEPENDENCIES
+
+- react-google-maps
+full API to support Google Maps for React.
+- react-sidebar
+React component to create a dockable sidebar.
+- escape-string-regexp
+Escape RegExp special characters.
+- recompose
+React utility belt for function components and higher-order components. 
+- reactstrap
+Stateless React Components for Bootstrap 4.
+
+###3rd PARTY APIs
+
+- Google Maps API
+
+##BUILD AND TEST THE APPLICATION
+
+- To build the application run `npm install`.
+- To run the application run `npm start`.
+
+##OFFLINE USE TEST
+
+To check offline use you can install a simple http server [npm install simplehttpserver -g](https://www.npmjs.com/package/simplehttpserver). Build the application and run by simplehttpserver [directory].
+
+
+##STANDARD README INFORMATION FOR CREATE REACT APP  
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
