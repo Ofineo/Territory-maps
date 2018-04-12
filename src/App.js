@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
 import Map from './Map';
+import AddressTable from './AddressTable';
 
 class App extends Component {
 
   state = {
+    markers: [
+      {
+        id: 1,
+        address: 'Flat 21 Coniston Court, Langstone Way',
+        postcode: 'NW7 1GP',
+        notes: 'NC'
+      },
+      {
+        id: 2,
+        address: 'Watchtower House, The Ridgeway',
+        postcode: 'NW7 1RS',
+        notes: 'NC'
+      }
+    ]
   }
 
   setMapCenter = (ref) => {
@@ -24,14 +39,24 @@ class App extends Component {
 
   render() {
     return (
-      <div>Welcome to Map It
-        <Map
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `100vh` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-          mapReference={(ref) => this.setMapCenter(ref)}
-        />
-      </div>
+      <article>
+        <header>
+          <h2>Welcome to Map It</h2>
+        </header>
+        <section>
+          <Map
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `70vh` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+            mapReference={(ref) => this.setMapCenter(ref)}
+          />
+        </section>
+        <section>
+          <AddressTable
+            markers={this.state.markers}
+          />
+        </section>
+      </article>
     );
   }
 }
